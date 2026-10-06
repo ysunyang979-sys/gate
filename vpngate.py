@@ -51,7 +51,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://check.helei.kdns.fr/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://ip1.358966.xyz/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -460,8 +460,62 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "saas.072159.xyz:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
+        "visa.com:443,"
+        "worldvectorlogo.com:443,"
+        "www.ventusky.com:443,"
+        "cdn.ddeed.de:443,"
+        "www.people.inc:443,"
+        "db-ip.com:443,"
+        "js.org:443,"
+        "assets.bizclikmedia.net:443,"
+        "syncfusion.com:443,"
+        "www.petronaftco.com:443,"
+        "duggal.com:443,"
+        "dogechain.info:443,"
+        "my.vultr.com:443,"
+        "crinacle.com:443,"
+        "dx.doi.org:443,"
+        "www.whatismyip.com:443,"
+        "www.mlkj888.com:443,"
+        "www.npmjs.com:443,"
+        "www.speedtest.net:443,"
+        "uptimerobot.com:443,"
+        "www.doiting.com:443,"
+        "stores.staples.com:443,"
+        "www.leics.police.uk:443,"
+        "kickstarter.com:443,"
+        "www.mastervolt.com:443,"
+        "www.blibli.com:443,"
+        "jobsdb.com:443,"
+        "www.donaldjtrump.com:443,"
+        "kali.download:443,"
+        "www.akasantech.com:443,"
+        "www.visa.com.sg:443,"
+        "stonexbullion.com:443,"
+        "hzytjy.cn:443,"
+        "www.chess.com:443,"
+        "www.zendesk.com:443,"
+        "emos.prlo.de:443,"
+        "www.udacity.com:443,"
+        "spring.io:443,"
+        "serviceshub.samsclub.com:443,"
+        "www.xflash.vip:443,"
+        "ncc.gov.ng:443,"
+        "www.jp.pima.gov:443,"
+        "www.carousell.sg:443,"
+        "mskcc.org:443,"
+        "stlouiscountymo.gov:443,"
+        "www.bangbenjiaju.com:443,"
+        "wppaunz.com:443,"
+        "www.trumpinternationalrealty.com:443,"
+        "www.bis.gov:443,"
+        "www.loc.gov:443,"
+        "cdn.sketch.com:443,"
+        "w3.org:443,"
+        "www.shopify.com:443,"
+        "moondroplab.com:443,"
+        "resources.biginterview.com:443,"
+        "email.lg.com:443",
     ).split(",")
     if h.strip()
 ]
